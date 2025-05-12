@@ -1,6 +1,6 @@
 file_format: "1"
 id: konoha
-name: Konoha
+name: Trk Numpad
 type: shield
 url: https://codeberg.org/konohana/zmk-config-konoha
 requires: [nice_nano_v2]
