@@ -1,8 +1,8 @@
 file_format: "1"
-id: konoha
+id: trk-numpad
 name: Trk Numpad
 type: shield
-url: https://codeberg.org/konohana/zmk-config-konoha
+url: https://www.trkeyboards.com
 requires: [nice_nano_v2]
 features:
   - keys
