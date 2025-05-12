@@ -4,20 +4,22 @@
     keymap {
         compatible = "zmk,keymap";
 
-	default_layer {
-            bindings = <
-                &kp Q  &kp W  &kp E  &kp R  &kp T
-                &kp A  &kp S  &kp D  &kp F  &kp G
-                &mo 1  &kp X         &kp V
-	    >;
-	};
+        default_layer {
+                bindings = <
+                    &kp Q  &kp W  &kp E  &kp R  &kp T
+                    &kp A  &kp S  &kp D  &kp F  &kp G
+                    &mo 1  &kp X         &kp V
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+        };
 
-	num_layer {
-            bindings = <
-                &kp Q  &kp W  &kp E  &kp R  &kp T
-                &kp A  &kp S  &kp D  &kp F  &kp G
-                &mo O  &kp X         &kp V
-	    >;
-	};
+        num_layer {
+                bindings = <
+                    &kp Q  &kp W  &kp E  &kp R  &kp T
+                    &kp A  &kp S  &kp D  &kp F  &kp G
+                    &mo O  &kp X         &kp V
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+        };
     };
 };

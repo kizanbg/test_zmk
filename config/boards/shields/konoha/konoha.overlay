@@ -21,10 +21,10 @@
 	    , <&key_physical_attrs 100 100 100 100   0  0  0>
 	    , <&key_physical_attrs 100 100 200 100   0  0  0>
 	    , <&key_physical_attrs 100 100 300 100   0  0  0>
-	    , <&key_physical_attrs 100 100 400 100   0  0  0>
+	    , <&key_physical_attrs 100 200 400 100   0  0  0>
 	    , <&key_physical_attrs 100 100   0 200   0  0  0>
 	    , <&key_physical_attrs 200 100 100 200   0  0  0>
-	    , <&key_physical_attrs 200 100 300 200   0  0  0>
+	    , <&key_physical_attrs 100 100 300 200   0  0  0>
 	    ;
     };
 
@@ -54,5 +54,18 @@
             , <&gpio0     9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&gpio1     6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
+    };
+
+    encoder: encoder {
+        compatible = "alps,ec11";
+        label = "ENCODER";
+        a-gpios = <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio1  4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        resolution = <2>;
+    };
+
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&encoder>;
     };
 };
