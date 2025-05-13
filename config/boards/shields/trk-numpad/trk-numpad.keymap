@@ -1,5 +1,7 @@
 #include <behaviors.dtsi>
 
+&encoder { status = "okay"; };
+
 / {
     keymap {
         compatible = "zmk,keymap";
